@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f1eb;
+    color: #2f2f2f;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.biography {
+    background-color: white;
+    padding: 50px;
+    margin-bottom: 30px;
+}
+
+.biography h2,
+.timeline h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+.biography p {
+    margin-bottom: 18px;
+}
+
+.timeline {
+    background-color: #e8ddd0;
+    padding: 50px;
+    margin-bottom: 30px;
+}
+
+.timeline-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 5px solid #a67c52;
+}
+
+.timeline-item h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.quote {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 60px 30px;
+    margin-bottom: 30px;
+}
+
+.quote blockquote {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-style: italic;
+    max-width: 700px;
+    margin: auto;
+}
+
+.quote p {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #111;
+    color: white;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    .biography,
+    .timeline {
+        padding: 30px 20px;
+    }
+
+    .hero img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .quote blockquote {
+        font-size: 22px;
+    }
+}

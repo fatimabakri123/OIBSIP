@@ -1,0 +1,384 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4eee7,
+            #ded1c4
+        );
+
+    color: #2f2722;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.calculator-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+
+/* ==========================================
+   CALCULATOR
+========================================== */
+
+.calculator {
+    width: 100%;
+
+    padding: 25px;
+
+    border-radius: 28px;
+
+    background: #211c19;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.calculator-header {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.calculator-header h1 {
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.calculator-header p {
+    color: #bdb4ae;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==========================================
+   DISPLAY
+========================================== */
+
+.display-container {
+    width: 100%;
+
+    min-height: 125px;
+
+    padding: 20px;
+
+    margin-bottom: 12px;
+
+    border-radius: 18px;
+
+    background: #302924;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+
+/* Current Expression */
+
+.expression {
+    width: 100%;
+
+    min-height: 28px;
+
+    color: #a99e96;
+
+    font-size: 18px;
+
+    text-align: right;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* Current Result */
+
+.result {
+    width: 100%;
+
+    margin-top: 5px;
+
+    color: #ffffff;
+
+    font-size: 38px;
+
+    font-weight: 600;
+
+    text-align: right;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
+.error-message {
+    min-height: 22px;
+
+    margin-bottom: 8px;
+
+    color: #ff8d8d;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   BUTTON GRID
+========================================== */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+/* ==========================================
+   ALL BUTTONS
+========================================== */
+
+.button {
+    height: 65px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease,
+        background 0.15s ease;
+}
+
+
+/* Hover */
+
+.button:hover {
+    filter: brightness(1.12);
+}
+
+
+/* Click */
+
+.button:active {
+    transform: scale(0.94);
+}
+
+
+/* ==========================================
+   NUMBER BUTTONS
+========================================== */
+
+.number,
+.decimal {
+    background: #403731;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   OPERATORS
+========================================== */
+
+.operator {
+    background: #b88962;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   CLEAR
+========================================== */
+
+.clear {
+    background: #8d6250;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   DELETE
+========================================== */
+
+.delete {
+    background: #574941;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   EQUALS
+========================================== */
+
+.equals {
+    grid-row: span 2;
+
+    height: 140px;
+
+    background: #d29b6f;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   ZERO
+========================================== */
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .calculator {
+        padding: 18px;
+
+        border-radius: 22px;
+    }
+
+    .calculator-header h1 {
+        font-size: 24px;
+    }
+
+    .calculator-header p {
+        font-size: 11px;
+    }
+
+    .display-container {
+        min-height: 115px;
+
+        padding: 16px;
+    }
+
+    .result {
+        font-size: 32px;
+    }
+
+    .expression {
+        font-size: 16px;
+    }
+
+    .button {
+        height: 58px;
+
+        font-size: 20px;
+
+        border-radius: 14px;
+    }
+
+    .equals {
+        height: 126px;
+    }
+}
+
+
+@media (max-width: 350px) {
+
+    .calculator {
+        padding: 14px;
+    }
+
+    .buttons {
+        gap: 7px;
+    }
+
+    .button {
+        height: 52px;
+
+        font-size: 18px;
+    }
+
+    .equals {
+        height: 111px;
+    }
+
+    .result {
+        font-size: 28px;
+    }
+}
